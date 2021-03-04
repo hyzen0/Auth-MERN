@@ -3,11 +3,11 @@ const router = express.Router();
 const bcrypt = require("bcryptjs");
 const jsonwt = require("jsonwebtoken");
 const passport = require("passport");
-const key = require("../../setup/myurl");
+const key = "imbatman";
 
 router.get("/", (req, res) => res.json({ Test: "Auth is being tested" }));
 
-const Person = require("../../models/Person");
+const Person = require("../models/Person");
 
 router.post("/register", (req, res) => {
   Person.findOne({ email: req.body.email })

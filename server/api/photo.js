@@ -19,7 +19,7 @@ const upload = multer({
   storage: storage,
 }).single("profilepic");
 
-router.post("/upload", (req, res) => {
+router.post("/", (req, res) => {
   upload(req, res, error => {
     if (error) {
       res.render("index", {
@@ -33,3 +33,5 @@ router.post("/upload", (req, res) => {
     }
   });
 });
+
+module.exports = router;

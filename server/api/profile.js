@@ -3,9 +3,9 @@ const router = express.Router();
 const mongoose = require("mongoose");
 const passport = require("passport");
 
-const Person = require("../../models/Person");
+const Person = require("../models/Person");
 
-const Profile = require("../../models/Profile");
+const Profile = require("../models/Profile");
 
 router.get(
   "/",
@@ -57,4 +57,4 @@ router.post(
   }
 );
 
-module.exports = routers;
+module.exports = router;
